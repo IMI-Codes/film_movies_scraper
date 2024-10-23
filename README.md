@@ -13,4 +13,3 @@
 - https://myanimelist.net/
 - https://www.animenewsnetwork.com/
 - www.rottentomatoes.com
-
