@@ -8,6 +8,15 @@
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
 # settings.py
+FEEDS = {
+    r"imdb\scraped_data\data.csv":{
+        "format":"csv"
+    },
+    r"imdb\scraped_data\data.jsonl":{
+        "format":"jsonlines"
+    }
+}
+
 FAKEUSERAGENT_PROVIDERS = [
     'scrapy_fake_useragent.providers.FakeUserAgentProvider',  # this is the first provider we'll try
     'scrapy_fake_useragent.providers.FakerProvider',          # fallback to faker if FakeUserAgentProvider fails
