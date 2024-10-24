@@ -6,7 +6,9 @@
 import scrapy
 
 
-class ImdbItem(scrapy.Item):
+class Most_watched_Item(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    name = scrapy.Field()
+    meta_Data = scrapy.Field()
+    rating = scrapy.Field()
+    plot = scrapy.Field()
