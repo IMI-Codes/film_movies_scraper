@@ -5,9 +5,12 @@
 
 
 # useful for handling different item types with a single interface
-from itemadapter import ItemAdapter
-
+from itemadapter import ItemAdapter # type: ignore
+import re
 
 class ImdbPipeline:
     def process_item(self, item, spider):
+        adapter = ItemAdapter(item)
+        name = adapter.get("name")
+        patter = re.compile(r"{\d}.")
         return item

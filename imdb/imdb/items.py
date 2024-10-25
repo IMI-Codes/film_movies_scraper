@@ -13,9 +13,3 @@ class Most_watched_Item(scrapy.Item):
     rating = scrapy.Field()
     plot = scrapy.Field()
     
-class _2022_movies(scrapy.Item):
-    name = scrapy.Field()
-    meta_Data = scrapy.Field()
-    rating = scrapy.Field()
-    plot = scrapy.Field()
-
