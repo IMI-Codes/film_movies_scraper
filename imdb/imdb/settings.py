@@ -10,10 +10,10 @@
 # settings.py
 FEEDS = {
     r"imdb\scraped_data\data.csv":{
-        "format":"csv"
+        "format":"csv","overwrite":True
     },
     r"imdb\scraped_data\data.jsonl":{
-        "format":"jsonlines"
+        "format":"jsonlines","overwrite":True
     }
 }
 
@@ -85,9 +85,11 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    "imdb.pipelines.ImdbPipeline": 300,
-#}
+ITEM_PIPELINES = {
+    "imdb.pipelines.ImdbPipeline": 300,
+    "imdb.pipelines.dropMeta": 400,
+    "imdb.pipelines.Check_duplicate": 500,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

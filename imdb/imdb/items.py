@@ -12,4 +12,8 @@ class Most_watched_Item(scrapy.Item):
     meta_Data = scrapy.Field()
     rating = scrapy.Field()
     plot = scrapy.Field()
+    release_year = scrapy.Field()
+    film_length = scrapy.Field()
+    age_rating = scrapy.Field()
+    occurrence = scrapy.Field()
     
